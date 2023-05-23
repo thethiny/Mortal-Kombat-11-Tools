@@ -15,7 +15,7 @@ supported_platforms = {
 app = Flask("mk11_api")
 
 def connect_deta():
-    return Deta("a04g52mb_JwN2bFiJFjPynxdZLHRHhgXXvqr7B4Vu")
+    return Deta("")
 
 def connect_base_auth():
     return connect_deta().Base("authentication")
