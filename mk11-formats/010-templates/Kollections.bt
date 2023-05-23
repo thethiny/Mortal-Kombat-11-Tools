@@ -1,0 +1,64 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+struct HeaderBlock {
+    uint64 ID;
+    uint64 Type;
+    uint64 Length;
+};
+struct NameBlock {
+    uint32 NameLength;
+    char Name[NameLength];
+};
+
+void ParseBlock()
+{
+    char padding;
+    if (padding)
+        FSkip(-1);
+    HeaderBlock Header;
+    struct {
+        if (Header.Type == 0x1C) // Name
+        {
+            NameBlock Name;
+        }
+        else if (Header.Type == 0x03) // Integer
+        {
+            uint32 Value;
+        }
+        else if (Header.Type == 0x04) // Some flag thing
+        {
+            uint32 Value;
+            if (Value == 0x02)
+                uint64 EndFlag;
+        }
+        else if (Header.Type == 0x18) // Integer Arrau
+        {
+            uint64 Value;
+            local uint64 i;
+            struct {
+                for (i = 0; i < Value+1; i++)
+                    ParseBlock();
+            } Contents;
+            uint64 EndArrayFlag;
+        }
+        else
+        {
+            y; //To Error
+        }
+    } Data;
+}
+
+uint32 count;
+local uint32 i;
+while(1)
+    ParseBlock();

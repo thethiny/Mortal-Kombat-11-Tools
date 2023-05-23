@@ -1,0 +1,37 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+uint32 ID;
+uint16 GameVer[2];
+
+uint32 Table1Count;
+uint32 Table2Count;
+uint32 Table3Count;
+uint32 Table4Count;
+uint32 Table5Count;
+uint32 Table6Count;
+uint32 Table7Count;
+uint32 Table8Count;
+uint32 DataSize1;
+uint32 StringsSize1;
+uint32 DataSize2;
+uint32 UNK;
+uint32 Table8Count;
+uint32 UNK;
+uint32 StringsSize2;
+uint32 UNK;
+
+uint64 SomeObj[Table1Count*8*2];
+
+char REACH[Table1Count];
+char REACH;

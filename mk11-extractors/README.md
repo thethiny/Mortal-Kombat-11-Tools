@@ -1,0 +1,1 @@
+extractMK11 and read_database_lazy both extract the database but I don't remember which is which. Refer to database_handlers.py to see which is called when.

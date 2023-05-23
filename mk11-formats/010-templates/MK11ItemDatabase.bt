@@ -1,0 +1,126 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+struct MainItemStruct;
+struct ItemStruct;
+struct HeaderStruct;
+struct BodyStruct;
+struct BodyTypeStruct;
+struct ItemMetaStruct;
+struct NameStruct;
+struct ItemDefinitionHolderStruct;
+struct ObjectStruct;
+
+string GetItemType(uint64 ItemType);
+void CreateStruct(uint64 ItemType);
+
+local uint64 i;
+
+
+string GetItemType(uint64 ItemType)
+{
+    switch(ItemType)
+    {
+    case 1:
+        return "Heading";
+    case 0x4F:
+        return "Name";
+    case 0x50:
+        return "Item";
+    default:
+        return "Unknown";        
+    }
+}
+
+string GetItemSubType(uint64 ItemType)
+{
+    switch(ItemType)
+    {
+    case 0x10:
+        return "ItemDefinition";
+    default:
+        return "";        
+    }
+}
+
+// 0x50 Means Start Array, 0x3C means End Array.
+
+struct ItemMetaStruct
+{
+    uint64 ID;
+    uint64 ItemType <comment=GetItemType>;
+    uint64 SegmentLength;
+};
+
+struct ItemStruct {
+    uint64 Var;
+    GUID   ItemGUID;
+};
+
+struct NameStruct
+{
+    uint32 NameLength;
+    char Name[NameLength];
+};
+
+struct HeaderStruct
+{
+    uint32 ItemsCount;
+    for (i = 0; i < ItemsCount; i++)
+    {
+        ObjectStruct Object;
+    }
+};
+
+struct ArrayStruct
+{
+    uint64 ItemsCount; // Unused?
+    uint64 ArrayEndFlag;
+    while(ArrayEndFlag != 0x3C)
+    {
+        FSeek Back by 8;
+        ObjectStruct Object;
+        uint64 ArrayEndFlag;
+        
+    }
+};
+
+struct ObjectStruct
+{
+    ItemMetaStruct Meta;
+    struct
+    {
+        CreateStruct(Meta.ItemType);
+    } Body;
+};
+
+ObjectStruct File;
+
+void CreateStruct(uint64 ItemType)
+{
+    switch(ItemType)
+    {
+     case 0x01:
+        HeaderStruct Content;
+        break;
+     case 0x50:
+        ArrayStruct Content;
+        break;
+     case 0x4F:
+        NameStruct Content;
+        break;
+    default:
+        //CreateStruct();
+        break;
+    }
+}

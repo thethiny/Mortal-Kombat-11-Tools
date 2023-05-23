@@ -1,0 +1,199 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+struct UEVersion {
+    uint16 FileVersion;
+    uint16 LicenseeVersion;
+};
+struct PkgVersion {
+    uint32 ShaderVersion;
+    uint32 EngineVersion;
+};
+struct  MidwayStruct {
+    char FourCC[4];
+    uint32 EngineVersion;
+    uint32 CookVersion;
+};
+struct PackageStruct {
+    char MainPackage[4];
+    uint32 Flags;
+};
+struct TableStruct {
+    uint32 Count;
+    uint64 Offset;
+};
+
+struct UPKHeader {
+    uint32 Magic;
+    UEVersion EngineVersion;
+    uint32 DataOffset;
+    PkgVersion PackageVersion;
+    MidwayStruct MidwayTeamVersion;
+    PackageStruct Main;
+    TableStruct Names;
+    TableStruct Exports;
+    TableStruct Imports;
+    uint64 BulkDataOffset;
+    GUID FileGUID;
+    uint32 CompressionType;
+    uint32 PackagesCount;
+    
+};
+
+struct DataStruct {
+    uint64 Offset;
+    uint64 Size;
+};
+
+struct PackageDataStruct
+{
+    DataStruct Data;
+    DataStruct Package;
+};
+
+struct NameStruct {
+    uint32 Length;
+    char Name[Length];
+};
+
+struct InnerPackage {
+    NameStruct PackageName;
+    PackageDataStruct Data;
+    uint32 SubPackagesCount;
+};
+
+struct ExtraTable {
+    uint32 UNK[2];
+    NameStruct Name;
+    uint32 EntriesCount;
+};
+
+struct ExtraEntry {
+    uint64 DecompressedSize;
+    uint64 CompressedSize;
+    uint64 DecompressedOffset;
+    uint64 CompressedOffset;
+};
+
+// Loop Stuff
+local uint32 i;
+local uint32 j;
+
+// Data Struct
+
+UPKHeader MK11Header;
+
+local uint64 TotalSubPackagesCount = 0;
+
+struct {
+
+    struct {
+        local uint32 i;
+        local uint32 j;
+        for (i = 0; i < MK11Header.PackagesCount; i++)
+        {
+            struct {
+                InnerPackage Header;
+                TotalSubPackagesCount += Header.SubPackagesCount;
+                struct {
+                    for (j = 0; j < Header.SubPackagesCount; j++)
+                    {
+                        PackageDataStruct SubPackage;
+                    }
+                } Body;
+            } MK11FilePackage;
+        }
+    } Packages;
+    
+    struct {
+    
+        uint32 ExternalPackagesCount;
+        struct {
+            local uint32 i;
+            for (i = 0; i < ExternalPackagesCount; i++)
+            {
+                InnerPackage Package;
+            }
+        } ExternalPackages;
+    
+    } MK11ExternalPackage;
+    
+    char Padding[0x18];
+    NameStruct FileName;
+    
+    struct ExtraTableEntriesStruct {
+        local uint32 i;
+        local uint32 j;
+    
+        uint32 EntriesCount;
+        for (i = 0; i < EntriesCount; i++)
+        {
+            ExtraTable Table;
+            for (j = 0; j < Table.EntriesCount; j++)
+            {
+                ExtraEntry Entry;
+            }
+            uint32 CompressionType;
+        }
+    
+    };
+    
+    ExtraTableEntriesStruct PSFData;
+    ExtraTableEntriesStruct BulkData;
+} MK11Body;
+
+struct CompressionStruct {
+    uint64 Compressed;
+    uint64 Decompressed;
+};
+
+struct Segment {
+    uint32 Magic;
+    uint32 UNK;
+    uint64 BlockSize;
+    CompressionStruct SegmentData;
+};
+
+
+struct {
+    for (i = 0; i < TotalSubPackagesCount; i++)
+    {
+        struct {
+            Segment SegmentHeader;
+        
+            local uint64 total = 0;
+            local uint64 i;
+            local uint64 j = 0;
+            
+            struct {
+        
+                struct {
+                    while (total < SegmentHeader.SegmentData.Decompressed)
+                    {
+                        CompressionStruct SegmentData;
+                        total += SegmentData.Decompressed;
+                        j++;
+                    }
+                } Header;
+            
+                struct {
+                    for (i = 0; i < j; i++)
+                    {
+                        struct {
+                            ubyte Data[Header.SegmentData[i].Compressed];
+                        } Data;
+                    }
+                } Body;
+            } SegmentBody;
+        } Block;
+    }
+} MK11Data;

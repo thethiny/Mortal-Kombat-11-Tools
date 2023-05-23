@@ -1,0 +1,427 @@
+{
+    "body": {
+        "response": {
+            "mTopSection": [
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 1,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "23ACDC084A6E65DC7D79B88559666B40",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    },
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 1,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "1C0A4C8544B3C80CF7D58898358D3A83",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "HumbleBundle3",
+                                "descriptionOverride": "",
+                                "dropCount": 6,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1636038000000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 350,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "D55707954C65B5A29C88BC8926840A1C",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    },
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 350,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "5C9E20654D6260B656C3E282041CC717",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    },
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 210,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "B85B7219457AB8EEDDCBC8BC51BB57AB",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    },
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 210,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "AA8A3A104F71666B860482B939F0B3AF",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    },
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 210,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "30850BC14EC26968C9C226B6A0C4EF79",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    },
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 525,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "9F2741914D4B2ADD811B9E82B50BE07A",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "SindelBundle3",
+                                "descriptionOverride": "",
+                                "dropCount": 6,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1636038000000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 500,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "1C0A4C8544B3C80CF7D58898358D3A83",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1635994800000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 500,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "926AE681448622B512DC51818AA73AC8",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1635994800000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 300,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "CA5C6E2F458CF835AEE06BA294C393F4",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1635994800000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 300,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "B0D662444134F88B1F8CD3B431C292A1",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1635994800000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 500,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "BE216E554022B7B77C19EC85EFAF9D5E",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1635994800000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 500,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "A3CFCCE54587FCE302ADFEB8E6B1C60A",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1635994800000
+                        }
+                    ]
+                },
+                {
+                    "mAvailabilities": [
+                        {
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 750,
+                                        "lootItemType": "EquipmentItem",
+                                        "equipmentId": "3F434EDE4CA3DE54AE11EF8736475ADF",
+                                        "isUniqueToPlayersInventory": true,
+                                        "seed": 0,
+                                        "level": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mPremiumCurrencyCost": null,
+                            "mStartTime": 1635951600000,
+                            "mEndTime": 1635994800000
+                        }
+                    ]
+                }
+            ],
+            "mBottomSection": [
+                {
+                    "mAvailabilities": [
+                        {
+                            "mStartTime": 0,
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "amount": 550,
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 100,
+                                        "lootItemType": "SpendableItemLootItem",
+                                        "id": 1,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mEndTime": 0
+                        },
+                        {
+                            "mStartTime": 0,
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "amount": 420,
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 500,
+                                        "lootItemType": "SpendableItemLootItem",
+                                        "id": 2,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mEndTime": 0
+                        },
+                        {
+                            "mStartTime": 0,
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "amount": 1200,
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 1000,
+                                        "lootItemType": "SpendableItemLootItem",
+                                        "id": 3,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mEndTime": 0
+                        },
+                        {
+                            "mStartTime": 0,
+                            "mReward": {
+                                "items": [
+                                    {
+                                        "amount": 12,
+                                        "dropWeight": 1,
+                                        "premiumCurrencyPrice": 1,
+                                        "lootItemType": "SpendableItemLootItem",
+                                        "id": 4,
+                                        "dropFlags": 7
+                                    }
+                                ],
+                                "rules": [],
+                                "name": "None",
+                                "descriptionOverride": "",
+                                "dropCount": 1,
+                                "dropWeight": 0,
+                                "dropFlags": 1
+                            },
+                            "mEndTime": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "metadata": {
+        "msg": "ONLINE_RESULT_SUCCESS"
+    },
+    "return_code": 0
+}

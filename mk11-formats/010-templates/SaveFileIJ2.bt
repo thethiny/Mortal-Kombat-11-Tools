@@ -1,0 +1,40 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+FSkip(0x140394); // Skip to known part
+
+char SegmentName[0x80];
+uint32 SegmentSize;
+uint32 SegmentUNK1;
+uint32 SegmentSplitter;
+struct InventorySegmentStruct {
+
+    uint32 SegmentMagic;
+    uint32 SegmentFlags; //?
+    uint32 SegmentUNK2;
+    uint32 SegmentUNK3;
+    uint32 SegmentType; //?
+    uint32 TypeNameLength;
+    char TypeName[TypeNameLength];
+    uint32 TypeNameValueLength;
+    char TypeNameValue[TypeNameValueLength];
+    uint32 AGBinaryLength;
+    ubyte AGBinaryData[AGBinaryLength];
+    ubyte Unknown[3];
+};
+
+local uint64 i;
+for (i = 0; i < 100; i++) // Change this
+{
+    InventorySegmentStruct Obj;
+}

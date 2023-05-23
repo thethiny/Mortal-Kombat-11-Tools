@@ -1,0 +1,114 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+struct BlockHeader;
+struct BlockBody;
+struct Block01;
+struct Block4F;
+struct Block50;
+void ParseBody();
+void ParseBlock50();
+
+void ParseBlock50()
+{
+    Block50 Block50Data;
+    
+    local uint64 Type = Block50Data.Type;
+    if (Type == 0x1C)
+    {
+        GUID Body;
+        uint64 ArrayEndFlag;
+    }
+    else if (Type == 0x22)
+    {
+        ParseBody();
+        //uint64 ArrayEndFlag;
+    }
+    else
+    {
+        ParseBody();
+        //uint64 ArrayEndFlag;
+    }    
+}
+
+
+void ParseBody()
+{
+    BlockHeader ContentHeader;
+    local uint64 Type = ContentHeader.Type;
+    if (Type == 0x01)
+    {
+        Block01 Block01Data;
+        struct
+        {
+            local uint32 i;
+            for (i = 0; i < Block01Data.Count; i++)
+            {   
+                ParseBody();
+            }
+        } Body;
+    }
+    else if (Type == 0x4F)
+    {
+        struct
+        {
+            Block4F Block4FData;
+            ParseBody();
+            uint64 ObjectEndFlag;
+        } Body;
+    }
+    else if (Type == 0x50)
+    {
+        struct
+        {
+            ParseBlock50();
+        } Body;
+    }
+    else if (Type == 0x1C)
+    {
+        struct
+        {
+            GUID guid;
+        } Body;
+    }
+    else // Unknown
+    {
+        y; // Error
+    }
+}
+
+struct BlockHeader
+{
+    uint64 ID;
+    uint64 Type;
+    uint64 BlockLength;
+};
+
+struct Block01
+{
+    uint32 Count;    
+};
+
+struct Block4F
+{
+    uint32 NameLength;
+    char Name[NameLength];
+};
+
+struct Block50
+{
+    uint64 Type;
+};
+
+struct {
+    ParseBody();
+} MainBody;

@@ -1,0 +1,122 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+struct FileDataStruct
+{
+    uint32 DecompressedOffset;
+    uint32 DecompressedSize;
+    uint32 Offset;
+    uint32 CompressedSize;
+};
+
+struct TableNameMeta
+{
+    uint32 NameLength;
+    char Name[NameLength];
+    GUID NameGUID;
+};
+
+struct TableStruct
+{
+    
+    uint32 Count;
+    local uint32 i;
+    for (i = 0; i < Count; i++)
+        TableNameMeta HeaderNameData;
+};
+
+
+struct {
+
+    struct {
+
+        uint32 Magic;
+        
+        uint16 LicenseeVersion; uint16 PackageVersion;
+        
+        uint32 HeaderSize;
+        
+        char MidwayTeamFourCC[4];
+        uint32 PackageClass;
+        uint32 PackageLength;
+        char PackageName[PackageLength];
+        
+        struct {
+        
+            char Flag[3];
+            char Compression;
+        
+        } PackageFlags;
+    } Meta;
+
+    struct {
+    
+        uint32 NamesCount;
+        uint32 NameTable;
+        uint32 ExportsCount;
+        uint32 ExportTable;
+        uint32 ImportsCount;
+        uint32 ImportTable;
+        uint32 DataLocation; // Could be Bulk
+        uint32 BulkCount;
+        uint32 BulkLocation; // Could be Data
+    } Tables;
+    
+    uint32 PSVitaStuff[3];
+
+    struct {
+    
+        GUID FileGUID;
+    
+        
+        uint32 ShaderVersion;
+        uint32 EngineVersion;
+    } Engine;
+    
+} UE3Header;
+
+uint32 ExportTablesCount;
+uint32 ExportsCount;
+
+local uint32 i;
+
+struct {
+    for (i = 0; i < ExportsCount; i++)
+    {
+        FileDataStruct FileDataMeta;
+    }
+} ExportsOffsetsTable;
+
+uint32 UNK;
+
+GUID SomeGUID;
+
+uint32 TableSize;
+uint32 Table2Size;
+
+
+TableStruct Table; // Data
+TableStruct Table; // Data2?
+
+// Start of Data
+
+struct
+{
+    for (i = 0; i < ExportsCount; i++)
+    {
+        struct
+        {
+            char Data[ExportsOffsetsTable.FileDataMeta[i].CompressedSize];
+        } Data;
+    }
+} DataContents;
