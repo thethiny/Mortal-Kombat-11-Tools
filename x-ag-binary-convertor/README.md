@@ -1,3 +1,5 @@
+## Superseded by https://github.com/thethiny/MK12-Api
+
 Deserialize.py contains python implementation of save file conversion & x-ag-binary conversion
 xag_json.cpp contains the c++ implementation of the x-ag-binary format only for those used in MK11, so it is missing some stuff
 ag_conv.py can convert json to x-ag
