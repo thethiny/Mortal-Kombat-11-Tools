@@ -26,7 +26,7 @@ https://github.com/thethiny/ASIMK11
 A Mortal Kombat 11 tool that allows you to unlock any item in the game.
 Compatible with Steam and Xbox.
 
-https://github.com/thethiny/MK11-Unlocker
+https://github.com/thethiny/MK11-Unlocker * Private
 
 ## MK11 Database Extractor
 Tools that allow you to extract the contents of MK11's Database type.
@@ -51,6 +51,9 @@ https://github.com/thethiny/MK11DailyTracker
 *Private
 
 ## MK11 VR Hasher
+### Update 2025
+VR2 Hasher is now available, uses MT19937 as seed, and a custom FNV1-a key that is player dependant.
+https://github.com/thethiny/MK11-VR2-Hasher
 Hashes unlock payload using the first VR hash, dubbed `vr` hash. MK11 later introduced `vr2` hash that uses async communication, which requires ASIMK11. How the hash is calculated for `vr2` is unknown, however the hash is done on the item's `SlugId` + `ts` (time string) using the user's personal key, generated in-game. The key is constant and doesn't change across runs.
 
 `vr2` input is in the format: `{tsString}:{slugId}`
