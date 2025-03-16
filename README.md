@@ -52,7 +52,10 @@ https://github.com/thethiny/MK11DailyTracker
 
 ## MK11 VR Hasher
 ### Update 2025
+
 VR2 Hasher is now available, uses MT19937 as seed, and a custom FNV1-a key that is player dependant.
+
+
 https://github.com/thethiny/MK11-VR2-Hasher
 Hashes unlock payload using the first VR hash, dubbed `vr` hash. MK11 later introduced `vr2` hash that uses async communication, which requires ASIMK11. How the hash is calculated for `vr2` is unknown, however the hash is done on the item's `SlugId` + `ts` (time string) using the user's personal key, generated in-game. The key is constant and doesn't change across runs.
 
